@@ -111,7 +111,7 @@ extern void PORT6_IRQHandler    (void) __attribute__((weak,alias("Default_Handle
 #pragma DATA_SECTION(interruptVectors, ".intvecs")
 void (* const interruptVectors[])(void) =
 {
-    (void (*)(void))((uint32_t)&__STACK_END),
+    (void (*)(void))((uint32_t)&__STACK_END), // @suppress("Symbol is not resolved")
                                            /* The initial stack pointer */
     Reset_Handler,                         /* The reset handler         */
     NMI_Handler,                           /* The NMI handler           */
