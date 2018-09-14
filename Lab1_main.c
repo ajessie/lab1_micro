@@ -41,7 +41,7 @@ int main(void)
     while (1) {
 
         if ((P1IN & LEFT_BUTTON) != PRESSED)                //we have to check to see if the left button has been pressed
-            P1OUT = P1OUT & ~LEFT_LED;
+            P1OUT = P1OUT & ~LEFT_LED;                     //if it hasn't been pressed, we will keep the right red LED off
 
         else if ((P1IN & LEFT_BUTTON) == PRESSED)           //if it has, we will turn on the left red LED
             P1OUT = P1OUT | LEFT_LED;
